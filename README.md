@@ -50,3 +50,9 @@ Notes taken throughout the jouney of creating this app.
 ### Create an infinite scrolling ListView
 
 - `ListView`’s `builder` factory constructor allows you to build a list view lazily, on demand.
+- `Lists` allow an array of items to be stored.
+- `Sets` are lists that do not allow duplicate entries.
+
+### Add icons to the list
+
+- 

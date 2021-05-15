@@ -19,6 +19,7 @@ class RandomWords extends StatefulWidget {
 // Most of the app logic will reside here, as it will store all generated words for display.
 class _RandomWordsState extends State<RandomWords> {
   final _suggestions = <WordPair>[];
+  final _savedWords = <WordPair>{};
   final _fontSize = TextStyle(fontSize: 18.0);
 
   // Builds a list of suggestions, separated by dividers.
@@ -42,7 +43,12 @@ class _RandomWordsState extends State<RandomWords> {
 
   // Builds a single list item.
   Widget _buildRow(WordPair pair) {
-    return ListTile(title: Text(pair.asPascalCase, style: _fontSize));
+    // Check whether our generated word is already favourited.
+    final alreadySaved = _savedWords.contains(pair);
+    return ListTile(
+        title: Text(pair.asPascalCase, style: _fontSize),
+        trailing: Icon(alreadySaved ? Icons.favorite : Icons.favorite_border,
+            color: alreadySaved ? Colors.red : null));
   }
 
   @override
