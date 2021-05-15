@@ -25,3 +25,9 @@ samples, guidance on mobile development, and a full API reference.
 - The Scaffold widget, from the Material library, provides a default app bar, and a body property that holds the widget tree for the home screen. The widget subtree can be quite complex.
 - A widget’s main job is to provide a build() method that describes how to display the widget in terms of other, lower level widgets.
 - The body for this example consists of a Center widget containing a Text child widget. The Center widget aligns its widget subtree to the center of the screen.
+
+
+- [pudev](https://pub.dev/) is the home of external Dart/Flutter packages.
+- The `pubspec.yaml` file manages the assets and dependencies for a Flutter app. Add package references here.
+- `flutter pub get` is the command run to import packages. This automatically generates the `pubspec.lock` file with a list of all packages pulled into the project and their version numbers.
+- Packages are imported into Dart files using `import 'package:<name>'` e.g. `import 'package:english_words/english_words.dart'`
