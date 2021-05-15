@@ -55,4 +55,8 @@ Notes taken throughout the jouney of creating this app.
 
 ### Add icons to the list
 
-- 
+- Lambdas are declared as
+
+```dart
+onTap: () { /*...*/ };
+```

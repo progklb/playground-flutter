@@ -43,12 +43,24 @@ class _RandomWordsState extends State<RandomWords> {
 
   // Builds a single list item.
   Widget _buildRow(WordPair pair) {
-    // Check whether our generated word is already favourited.
+    // Check whether our generated word is already favorited.
     final alreadySaved = _savedWords.contains(pair);
     return ListTile(
-        title: Text(pair.asPascalCase, style: _fontSize),
-        trailing: Icon(alreadySaved ? Icons.favorite : Icons.favorite_border,
-            color: alreadySaved ? Colors.red : null));
+      // Display text
+      title: Text(pair.asPascalCase, style: _fontSize),
+      // Display favorite icon.
+      trailing: Icon(alreadySaved ? Icons.favorite : Icons.favorite_border,
+          color: alreadySaved ? Colors.red : null),
+      // Handle list item taps
+      onTap: () {
+        setState(() {
+          if (alreadySaved)
+            _savedWords.remove(pair);
+          else
+            _savedWords.add(pair);
+        });
+      },
+    );
   }
 
   @override
