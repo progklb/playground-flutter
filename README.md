@@ -19,6 +19,10 @@ samples, guidance on mobile development, and a full API reference.
 
 ## Observations
 
+Notes taken throughout the jouney of creating this app.
+
+### Create the starter Flutter app
+
 - This example creates a Material app. Material is a visual design language that is standard on mobile and the web. Flutter offers a rich set of Material widgets. It’s a good idea to have a `uses-material-design: true` entry in the flutter section of your `pubspec.yaml` file. This will allow you to use more features of Material, such as their set of predefined Icons.
 - The main() method uses arrow (=>) notation. Use arrow notation for one-line functions or methods.
 - The app extends StatelessWidget, which makes the app itself a widget. In Flutter, almost everything is a widget, including alignment, padding, and layout.
@@ -26,6 +30,7 @@ samples, guidance on mobile development, and a full API reference.
 - A widget’s main job is to provide a build() method that describes how to display the widget in terms of other, lower level widgets.
 - The body for this example consists of a Center widget containing a Text child widget. The Center widget aligns its widget subtree to the center of the screen.
 
+### Use an external package
 
 - [pudev](https://pub.dev/) is the home of external Dart/Flutter packages.
 - The `pubspec.yaml` file manages the assets and dependencies for a Flutter app. Add package references here.
