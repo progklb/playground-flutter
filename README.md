@@ -46,3 +46,7 @@ Notes taken throughout the jouney of creating this app.
 - By conventions the state for the widget adopts the widgets name - e.g. `RandomWords` and `RandomWordsState`.
 - To create a `StatefulWidget` and `State` pair, type `stful` and the IDE will suggest creating these for you. This provides boilerplate code for the two classes.
 - Prefixing an identifier with `_` enforces privacy in the Dart language, and is recommended for `State` objects.
+
+### Create an infinite scrolling ListView
+
+- `ListView`’s `builder` factory constructor allows you to build a list view lazily, on demand.
