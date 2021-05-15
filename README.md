@@ -36,3 +36,13 @@ Notes taken throughout the jouney of creating this app.
 - The `pubspec.yaml` file manages the assets and dependencies for a Flutter app. Add package references here.
 - `flutter pub get` is the command run to import packages. This automatically generates the `pubspec.lock` file with a list of all packages pulled into the project and their version numbers.
 - Packages are imported into Dart files using `import 'package:<name>'` e.g. `import 'package:english_words/english_words.dart'`
+
+### Add a Stateful widget
+
+- **Stateless** widgets are immutable, meaning that their properties can’t change — all values are final.
+- **Stateful** widgets maintain state that might change during the lifetime of the widget. Implementing a stateful widget requires at least two classes:
+  - 1. a StatefulWidget class that creates an instance of State class (immutable and can be discarded/regenerated)
+  - 2. a State class (persists over the lifetime of the widget)
+- By conventions the state for the widget adopts the widgets name - e.g. `RandomWords` and `RandomWordsState`.
+- To create a `StatefulWidget` and `State` pair, type `stful` and the IDE will suggest creating these for you. This provides boilerplate code for the two classes.
+- Prefixing an identifier with `_` enforces privacy in the Dart language, and is recommended for `State` objects.
