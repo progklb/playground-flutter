@@ -66,3 +66,5 @@ onTap: () { /*...*/ };
 - New pages are called "routes".
 - The `Navigator` manages a stack containing the apps routes.
 - Pushing a route into the `Navigator` stack displays that route, and popping returns to the previous route.
+- `Navigator.of(context).push(...)` is used to push a new route.
+- `Navigator.pop` does not need to be implemented if the app bar exposes a back button.

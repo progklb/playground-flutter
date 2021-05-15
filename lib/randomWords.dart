@@ -54,7 +54,24 @@ class _RandomWordsState extends State<RandomWords> {
     );
   }
 
-  void _pushSaved() {}
+  // Pushes a "favorited list" route into the Navigator.
+  void _pushSaved() {
+    Navigator.of(context)
+        .push(MaterialPageRoute<void>(builder: (BuildContext context) {
+      // Generate all tiles.
+      final tiles = _savedWords.map((WordPair pair) {
+        return ListTile(title: Text(pair.asPascalCase, style: _fontSize));
+      });
+      // Modify the generated tiles by adding dividors between each element.
+      final divided = tiles.isNotEmpty
+          ? ListTile.divideTiles(context: context, tiles: tiles).toList()
+          : <Widget>[];
+      // Scaffold the UI
+      return Scaffold(
+          appBar: AppBar(title: Text("Saved Suggestions")),
+          body: ListView(children: divided));
+    }));
+  }
 
   @override
   Widget build(BuildContext context) {
