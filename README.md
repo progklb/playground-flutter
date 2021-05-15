@@ -60,3 +60,9 @@ Notes taken throughout the jouney of creating this app.
 ```dart
 onTap: () { /*...*/ };
 ```
+
+### Navigate to a new screen
+
+- New pages are called "routes".
+- The `Navigator` manages a stack containing the apps routes.
+- Pushing a route into the `Navigator` stack displays that route, and popping returns to the previous route.
