@@ -88,14 +88,6 @@ onTap: () { /*...*/ };
 
 - When adding images, you need to update the `pubspec.yaml` file to access them.
 - Images can be accessed using `Image.asset('filePath')`
-// TODO
-- Screenshots for README.
-- Split out route into separate file?
-
-- Figure out Google Maps API integration (or open maps)
-- Figure out JSON read/write
-- Start layouts for app.	
-   - Consider adding splash.
 
 ### Resuable widgets
 
