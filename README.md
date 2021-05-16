@@ -73,7 +73,12 @@ onTap: () { /*...*/ };
 - The `Navigator` manages a stack containing the apps routes.
 - Pushing a route into the `Navigator` stack displays that route, and popping returns to the previous route.
 - `Navigator.of(context).push(...)` is used to push a new route.
-- `Navigator.pop` does not need to be implemented if the app bar exposes a back button.### Resuable widgets
+- `Navigator.pop` does not need to be implemented if the app bar exposes a back button.
+
+- There are two approaches to navigation, and both are available in later versions of Flutter. ([more information here](https://medium.com/flutter/learning-flutters-new-navigation-and-routing-system-7c9068155ade))
+  - Imperative (Navigator 1.0) *(More difficult to push/pop multiple pages and manage the stack)*
+  - Declarative (Navigator 2.0)
+
 ### Images
 
 - When adding images, you need to update the `pubspec.yaml` file to access them.
