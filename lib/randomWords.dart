@@ -20,7 +20,9 @@ class _RandomWordsState extends State<RandomWords> {
         // This callback is called once per suggested word pairing
         itemBuilder: (context, i) {
           // For each odd iteration, create a divider.
-          if (i.isOdd) return Divider();
+          if (i.isOdd) {
+            return Divider();
+          }
           // For even iterations, create a word pair.
           final index = i ~/ 2; // Dividde i by 2 and return integer result.
           // If we've passed the nubmer of created word pairs, generate more.

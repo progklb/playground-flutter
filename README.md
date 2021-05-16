@@ -21,6 +21,12 @@ samples, guidance on mobile development, and a full API reference.
 
 Notes taken throughout the jouney of creating this app.
 
+- `MaterialApp`s include an `AppBar`, title, background colour, certain fonts/icons etc.
+- Non-material apps do not include these out of the box, and require that they write these yourself.
+- There is also a `CupertinoApp`
+
+- To minimize the visual confusion that can result from heavily nested layout code, implement pieces of the UI in variables and functions.
+
 ### Create the starter Flutter app
 
 - This example creates a Material app. Material is a visual design language that is standard on mobile and the web. Flutter offers a rich set of Material widgets. It’s a good idea to have a `uses-material-design: true` entry in the flutter section of your `pubspec.yaml` file. This will allow you to use more features of Material, such as their set of predefined Icons.
@@ -67,4 +73,66 @@ onTap: () { /*...*/ };
 - The `Navigator` manages a stack containing the apps routes.
 - Pushing a route into the `Navigator` stack displays that route, and popping returns to the previous route.
 - `Navigator.of(context).push(...)` is used to push a new route.
-- `Navigator.pop` does not need to be implemented if the app bar exposes a back button.
+- `Navigator.pop` does not need to be implemented if the app bar exposes a back button.### Resuable widgets
+### Images
+
+- When adding images, you need to update the `pubspec.yaml` file to access them.
+- Images can be accessed using `Image.asset('filePath')`
+// TODO
+- Screenshots for README.
+- Split out route into separate file?
+
+- Figure out Google Maps API integration (or open maps)
+- Figure out JSON read/write
+- Start layouts for app.	
+   - Consider adding splash.
+
+### Resuable widgets
+
+- To minimize the visual confusion that can result from heavily nested layout code, implement pieces of the UI in variables and functions.
+- Common practice is to define a function to return the widget e.g. `Widget _buildListView() => ListView(...)`
+
+```dart
+var stars = Row(
+  mainAxisSize: MainAxisSize.min,
+  children: [
+    Icon(Icons.star, color: Colors.green[500]),
+    Icon(Icons.star, color: Colors.green[500]),
+    Icon(Icons.star, color: Colors.green[500]),
+    Icon(Icons.star, color: Colors.black),
+    Icon(Icons.star, color: Colors.black),
+  ],
+);
+
+final ratings = Container(
+  padding: EdgeInsets.all(20),
+  child: Row(
+    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+    children: [
+      stars,
+      Text(
+        '170 Reviews',
+        style: TextStyle(
+          color: Colors.black,
+          fontWeight: FontWeight.w800,
+          fontFamily: 'Roboto',
+          letterSpacing: 0.5,
+          fontSize: 20,
+        ),
+      ),
+    ],
+  ),
+);
+
+Widget _buildImageColumn() => Container(
+      decoration: BoxDecoration(
+        color: Colors.black26,
+      ),
+      child: Column(
+        children: [
+          _buildImageRow(1),
+          _buildImageRow(3),
+        ],
+      ),
+    );
+```
