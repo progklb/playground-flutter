@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_startup_namer/landing.dart';
 import 'package:flutter_startup_namer/randomWords.dart';
+import 'package:flutter_startup_namer/fluttermaps.dart';
 
 void main() => runApp(MyApp());
 
@@ -12,8 +13,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(primaryColor: Colors.white),
       routes: {
         "/": (context) => Landing(),
-        "/randomWords": (context) => RandomWords(),
-        "/other": (context) => null
+        "/${RandomWords.route}": (context) => RandomWords(),
+        "/${FlutterMaps.route}": (context) => FlutterMaps()
       },
     );
   }

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:english_words/english_words.dart';
 
 class RandomWords extends StatefulWidget {
+  static const String route = 'randomwords';
   @override
   _RandomWordsState createState() => _RandomWordsState();
 }

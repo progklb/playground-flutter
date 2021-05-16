@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_startup_namer/fluttermaps.dart';
+import 'package:flutter_startup_namer/randomWords.dart';
 
 class Landing extends StatelessWidget {
+  static const String route = 'landing';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -9,13 +13,13 @@ class Landing extends StatelessWidget {
         TextButton(
           child: Text("Startup Name Generator"),
           onPressed: () {
-            Navigator.pushNamed(context, "/randomWords");
+            Navigator.pushNamed(context, "/${RandomWords.route}");
           },
         ),
         TextButton(
-            child: Text("Other"),
+            child: Text("Maps"),
             onPressed: () {
-              Navigator.pushNamed(context, "/other");
+              Navigator.pushNamed(context, "/${FlutterMaps.route}");
             })
       ]),
     );
