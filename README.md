@@ -72,12 +72,17 @@ onTap: () { /*...*/ };
 - New pages are called "routes".
 - The `Navigator` manages a stack containing the apps routes.
 - Pushing a route into the `Navigator` stack displays that route, and popping returns to the previous route.
-- `Navigator.of(context).push(...)` is used to push a new route.
 - `Navigator.pop` does not need to be implemented if the app bar exposes a back button.
 
 - There are two approaches to navigation, and both are available in later versions of Flutter. ([more information here](https://medium.com/flutter/learning-flutters-new-navigation-and-routing-system-7c9068155ade))
   - Imperative (Navigator 1.0) *(More difficult to push/pop multiple pages and manage the stack)*
   - Declarative (Navigator 2.0)
+
+#### Imperative
+
+- `Navigator.of(context).push(...)` or `Navigator.push(...)` is used to push a new anonymous route.
+- `Navigator.pushNamed(...)` is used to push a named route. All routes must be defined in the `main.dart` entry point under a `routes: {}` object.
+- `onGenerateRoute` can be implemented to manually process a provided route, extract parameters, and act accordingly. (i.e. passing in params such as `'/details/:id'`)
 
 ### Images
 

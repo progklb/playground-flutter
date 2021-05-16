@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_startup_namer/randomWords.dart';
 
 class Landing extends StatelessWidget {
   @override
@@ -10,17 +9,13 @@ class Landing extends StatelessWidget {
         TextButton(
           child: Text("Startup Name Generator"),
           onPressed: () {
-            Navigator.push(context, MaterialPageRoute(builder: (context) {
-              return RandomWords();
-            }));
+            Navigator.pushNamed(context, "/randomWords");
           },
         ),
         TextButton(
             child: Text("Other"),
             onPressed: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context) {
-                return RandomWords();
-              }));
+              Navigator.pushNamed(context, "/other");
             })
       ]),
     );
