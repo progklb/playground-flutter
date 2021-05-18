@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_startup_namer/fluttermaps.dart';
 import 'package:flutter_startup_namer/randomWords.dart';
+import 'package:flutter_startup_namer/flchart.dart';
 
 class Landing extends StatelessWidget {
   static const String route = 'landing';
@@ -14,6 +15,12 @@ class Landing extends StatelessWidget {
           child: Text("Startup Name Generator"),
           onPressed: () {
             Navigator.pushNamed(context, "/${RandomWords.route}");
+          },
+        ),
+        TextButton(
+          child: Text("FL Chart"),
+          onPressed: () {
+            Navigator.pushNamed(context, "/${FLChart.route}");
           },
         ),
         TextButton(
