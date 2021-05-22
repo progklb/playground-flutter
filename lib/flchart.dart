@@ -1,3 +1,10 @@
+/*https://pub.dev/packages/fl_chart*/
+
+/*
+Alternatives:
+https://github.com/google/charts/tree/master/charts_flutter, https://pub.dev/packages/charts_flutter/install
+*/
+
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 

@@ -1,3 +1,10 @@
+/*https://github.com/fleaflet/flutter_map*/
+
+/*
+Alternatives:
+https://pub.dev/packages/flutter_google_maps
+*/
+
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:flutter_map/plugin_api.dart';
