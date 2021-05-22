@@ -9,26 +9,37 @@ class Landing extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Choose your mode")),
-      body: ListView(children: [
-        TextButton(
-          child: Text("Startup Name Generator"),
-          onPressed: () {
-            Navigator.pushNamed(context, "/${RandomWords.route}");
-          },
-        ),
-        TextButton(
-          child: Text("FL Chart"),
-          onPressed: () {
-            Navigator.pushNamed(context, "/${FLChart.route}");
-          },
-        ),
-        TextButton(
-            child: Text("Maps"),
+        appBar: AppBar(title: Text("Choose an experiment")),
+
+        // Hide an about dialog in the FAB! \o/
+        floatingActionButton: FloatingActionButton(
+            tooltip: "About",
+            child: const Icon(Icons.emoji_food_beverage),
+            onPressed: () => showAboutDialog(
+                context: context,
+                applicationIcon: Icon(Icons.emoji_food_beverage),
+                applicationLegalese:
+                    "This app is a playground for learning and experimentation with Flutter.\n\nHappy building!")),
+
+        // Main content
+        body: ListView(children: [
+          TextButton(
+            child: Text("Startup Name Generator"),
             onPressed: () {
-              Navigator.pushNamed(context, "/${FlutterMaps.route}");
-            })
-      ]),
-    );
+              Navigator.pushNamed(context, "/${RandomWords.route}");
+            },
+          ),
+          TextButton(
+            child: Text("FL Chart"),
+            onPressed: () {
+              Navigator.pushNamed(context, "/${FLChart.route}");
+            },
+          ),
+          TextButton(
+              child: Text("Flutter Map"),
+              onPressed: () {
+                Navigator.pushNamed(context, "/${FlutterMaps.route}");
+              })
+        ]));
   }
 }
