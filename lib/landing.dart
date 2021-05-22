@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_startup_namer/fluttermaps.dart';
-import 'package:flutter_startup_namer/randomWords.dart';
-import 'package:flutter_startup_namer/flchart.dart';
+import 'package:flutter_playground/fluttermaps.dart';
+import 'package:flutter_playground/randomWords.dart';
+import 'package:flutter_playground/flchart.dart';
 
 class Landing extends StatelessWidget {
   static const String route = 'landing';

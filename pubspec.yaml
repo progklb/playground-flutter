@@ -1,5 +1,5 @@
-name: flutter_startup_namer
-description: A new Flutter project.
+name: flutter_playground
+description: A project for experimentating and learning Flutter.
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `pub publish`. This is preferred for private packages.
