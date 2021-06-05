@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_playground/fluttermaps.dart';
 import 'package:flutter_playground/randomWords.dart';
 import 'package:flutter_playground/flchart.dart';
+import 'package:flutter_playground/fileStorage.dart';
 
 class Landing extends StatelessWidget {
   static const String route = 'landing';
@@ -39,6 +40,11 @@ class Landing extends StatelessWidget {
               child: Text("Flutter Map"),
               onPressed: () {
                 Navigator.pushNamed(context, "/${FlutterMaps.route}");
+              }),
+          TextButton(
+              child: Text("File Storage"),
+              onPressed: () {
+                Navigator.pushNamed(context, "/${FileStorage.route}");
               })
         ]));
   }

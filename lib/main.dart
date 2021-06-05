@@ -3,6 +3,7 @@ import 'package:flutter_playground/landing.dart';
 import 'package:flutter_playground/randomWords.dart';
 import 'package:flutter_playground/fluttermaps.dart';
 import 'package:flutter_playground/flchart.dart';
+import 'package:flutter_playground/fileStorage.dart';
 
 void main() => runApp(MyApp());
 
@@ -17,6 +18,7 @@ class MyApp extends StatelessWidget {
           "/${RandomWords.route}": (context) => RandomWords(),
           "/${FlutterMaps.route}": (context) => FlutterMaps(),
           "/${FLChart.route}": (context) => FLChart(),
+          "/${FileStorage.route}": (context) => FileStorage(),
         });
   }
 }
