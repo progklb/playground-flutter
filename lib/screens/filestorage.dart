@@ -1,3 +1,7 @@
+/*
+Demonstrates saving/loading data to and from a JSON file.
+*/
+
 import 'package:flutter/material.dart';
 
 class FileStorage extends StatefulWidget {
