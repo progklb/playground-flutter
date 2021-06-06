@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_playground/fluttermaps.dart';
-import 'package:flutter_playground/randomWords.dart';
-import 'package:flutter_playground/flchart.dart';
-import 'package:flutter_playground/fileStorage.dart';
+import 'package:flutter_playground/screens/fluttermaps.dart';
+import 'package:flutter_playground/screens/randomWords.dart';
+import 'package:flutter_playground/screens/flchart.dart';
+import 'package:flutter_playground/screens/fileStorage.dart';
 
 class Landing extends StatelessWidget {
   static const String route = 'landing';
