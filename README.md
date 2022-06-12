@@ -1,6 +1,8 @@
 # Flutter Playground
 
-A new Flutter project.
+A sandbox for experimenting with Flutter. Includes a `Landing` page that routes to other experiences.
+
+Below is the default Flutter "new project" read me:
 
 ## Getting Started
 
